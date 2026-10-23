@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Under the Hood · TikTok</title><style>body{margin:0;background:#0E1621;color:#F4F1EA;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}main{max-width:760px;margin:0 auto;padding:40px 16px}h1{color:#FF6B1A}code{display:block;word-break:break-all;background:#1b2635;padding:12px;border-radius:6px;margin:12px 0}button{background:#FF6B1A;color:#0E1621;border:0;border-radius:6px;padding:10px 16px;font-weight:600;cursor:pointer}</style></head><body><main>
+<h1>Under the Hood Uploader</h1>
+<p id="msg">This page completes the TikTok sign-in for the channel owner's private upload tool.</p>
+<code id="code" hidden></code>
+<button id="copy" hidden>Copy code</button>
+<p><a style="color:#FF6B1A" href="index.html">Home</a> · <a style="color:#FF6B1A" href="privacy.html">Privacy Policy</a> · <a style="color:#FF6B1A" href="terms.html">Terms of Service</a></p>
+<script>
+// Le code n'est envoyé nulle part : il s'affiche seulement pour être collé dans le Terminal (tools/tiktok_upload.py).
+var p=new URLSearchParams(location.search),c=p.get('code'),e=p.get('error');
+if(c){var el=document.getElementById('code');el.textContent=c;el.hidden=false;var b=document.getElementById('copy');b.hidden=false;
+b.onclick=function(){navigator.clipboard.writeText(c).then(function(){b.textContent='Copied';});};
+document.getElementById('msg').textContent='Sign-in done. Copy this code and paste it in the Terminal, then close this page. It expires in a few minutes.';}
+else if(e){document.getElementById('msg').textContent='TikTok returned an error: '+e+' '+(p.get('error_description')||'');}
+</script>
+</main></body></html>
