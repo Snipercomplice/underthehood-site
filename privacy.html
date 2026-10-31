@@ -9,13 +9,14 @@
 <p>Only the channel owner signs in, with their own Google account. No other person can sign in or use the Tool.</p>
 <h2>What data the Tool accesses</h2>
 <ul>
-<li>An OAuth access token and refresh token for the owner's Google account, with the permission to upload videos (youtube.upload) and to read basic channel information.</li>
+<li>An OAuth access token and refresh token for the owner's Google account, with two permissions: upload videos (youtube.upload) and manage the owner's own videos and comments (youtube.force-ssl), used only to read basic channel information, post one question as the first comment under the owner's own videos, and read the comments under the owner's own videos so the owner can reply to them.</li>
+<li>Comments read under the owner's own videos (author display name, text, date): a local copy is kept on the owner's computer for at most 30 days, then deleted. It is never shared.</li>
 <li>The IDs, titles and scheduled publish times of the videos the owner uploads.</li>
 </ul>
-<p>The Tool does not access, collect or store data about any viewer or any other YouTube user.</p>
+<p>Apart from the comments posted under the owner's own videos (see above), the Tool does not access, collect or store data about any viewer or any other YouTube user, and it never accesses any other channel.</p>
 <h2>How data is used, stored and shared</h2>
 <ul>
-<li>Tokens are stored only on the owner's own computer, in a local configuration file, and are used only to upload the owner's videos.</li>
+<li>Tokens are stored only on the owner's own computer, in a local configuration file readable only by the owner, and, for scheduled uploads, as an encrypted secret of the owner's private GitHub repository (GitHub Actions). They are used only to upload and manage the owner's own videos.</li>
 <li>Video IDs are kept in a local log on the same computer so the owner can track publications.</li>
 <li>No data is sold, shared with or disclosed to any third party.</li>
 <li>No cookies or tracking technologies are used, on this website or in the Tool.</li>
@@ -26,4 +27,4 @@
 <p>Any change to this policy will be published on this page with a new "last updated" date.</p>
 <h2>Contact</h2>
 <p><a href="mailto:underthehood1.cars@gmail.com">underthehood1.cars@gmail.com</a></p>
-<footer>Under the Hood · Contact: <a href="mailto:underthehood1.cars@gmail.com">underthehood1.cars@gmail.com</a> · Last updated: October 23, 2026</footer></main></body></html>
+<footer>Under the Hood · Contact: <a href="mailto:underthehood1.cars@gmail.com">underthehood1.cars@gmail.com</a> · Last updated: October 31, 2026</footer></main></body></html>
