@@ -5,6 +5,8 @@
 <p>The Tool uses YouTube API Services. By using the Tool, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <h2>TikTok</h2>
 <p>The Tool also uses the TikTok Login Kit and Content Posting API to send the owner's finished videos as drafts to the owner's own TikTok inbox. It requests only the basic profile (display name, open ID) and the permission to upload drafts. TikTok tokens are stored only on the owner's computer, are never shared, and can be revoked at any time in the TikTok app (Settings and privacy &gt; Security &gt; Manage app permissions). TikTok's handling of data is described in the <a href="https://www.tiktok.com/legal/privacy-policy">TikTok Privacy Policy</a>.</p>
+<h2>Instagram messages (free manual)</h2>
+<p>When someone comments the word GUIDE under an Under the Hood post, the Tool can send them one private reply through the official Instagram API, and, if they answer, check whether they follow the account (the API's follow status field) before sending the link to the free manual. Messages are marked as automated. To avoid sending twice, the Tool keeps, on the owner's computer only, the comment ID, the Instagram-scoped ID Instagram assigns to that person for this app, the step reached and the date. It does not store names, usernames, message text, or any other profile data, and nothing is shared with third parties. These records are deleted after 90 days, or earlier on request at the contact address below. Instagram's handling of data is described in the <a href="https://privacycenter.instagram.com/policy">Instagram Privacy Policy</a>.</p>
 <h2>Who uses the Tool</h2>
 <p>Only the channel owner signs in, with their own Google account. No other person can sign in or use the Tool.</p>
 <h2>What data the Tool accesses</h2>
@@ -12,7 +14,7 @@
 <li>An OAuth access token and refresh token for the owner's Google account, with the permission to upload videos (youtube.upload) and to manage the owner's own videos (youtube.force-ssl), which the Tool uses only to read basic channel information, post one question as the first comment on the owner's own videos, and update the title or description of the owner's own videos.</li>
 <li>The IDs, titles and scheduled publish times of the videos the owner uploads.</li>
 </ul>
-<p>The Tool does not access, collect or store data about any viewer or any other YouTube user.</p>
+<p>Apart from the Instagram message records described above, the Tool does not access, collect or store data about any viewer or any other user.</p>
 <h2>How data is used, stored and shared</h2>
 <ul>
 <li>Tokens are stored only on the owner's own computer, in a local configuration file, and are used only to upload the owner's videos.</li>
